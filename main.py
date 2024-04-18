@@ -1,5 +1,6 @@
 import random
 import sys
+import os
 
 class NumberGuessingGame:
     def __init__(self):
@@ -32,6 +33,7 @@ class NumberGuessingGame:
 class Menu:
     @staticmethod
     def display_menu():
+        os.system('cls' if os.name == 'nt' else 'clear')  # Clear the terminal screen
         print("Welcome to the Number Guessing Game!")
         print("1. Play with default settings")
         print("2. Set custom range and maximum attempts")
